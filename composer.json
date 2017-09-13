@@ -56,13 +56,14 @@
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
     ],
-    "teapi-scripts": [
+    "projeto-scripts": [
       "php -r \"shell_exec('bin/console app:get-parameters');\"",
       "php -r \"shell_exec('bin/console doctrine:database:create');\"",
       "php -r \"shell_exec('bin/console doctrine:schema:update --force --dump-sql');\""
     ],
     "post-install-cmd": [
-      "@symfony-scripts"
+      "@symfony-scripts",
+      "@projeto-scripts"
     ],
     "post-update-cmd": [
       "@symfony-scripts"
