@@ -68,7 +68,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/ControllerAbstract.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/ControllerInterface.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Command/generateParameters.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Controller/Api/UsuarioController.php">
           <value>
             <set />
           </value>
@@ -99,6 +129,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Entity/UsuarioInfo.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Service/UsuarioService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/AppBundle/Controller/Api/UsuarioControllerTest.php">
           <value>
             <set />
           </value>
