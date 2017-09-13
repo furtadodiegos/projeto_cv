@@ -1,0 +1,33 @@
+AppBundle\Entity\Usuario:
+    usuario_{1..5}:
+        strEmail: <email()>
+        strSenha: <password()>
+
+AppBundle\Entity\UsuarioInfo:
+    usuarioInfo_{1..5}:
+        strNome: <name()>
+        strSobrenome: <lastName()>
+        datNascimento: <birthdate()>
+        Usuario: '@usuario_*'
+
+AppBundle\Entity\Montadora:
+    montadora_{1..15}:
+        strNome: <modelo()>
+
+AppBundle\Entity\Categoria:
+    categoria_{1..5}:
+        strNome: <categoria()>
+
+AppBundle\Entity\Carro:
+    carro_{1..5}:
+        strNome: <carronome(<randomDigit()>)>
+        numPortas: <numberBetween(2, 4)>
+        strMotor: <categoria()>
+        Categoria: '@categoria_*'
+        Montadora: '@montadora_*'
+
+AppBundle\Entity\Pedido:
+    pedido_{1..5}:
+        datPedido: <dateTimeBetween('-1 year', 'now')>
+        Carro: '@carro_*'
+        Usuario: '@usuario_*'

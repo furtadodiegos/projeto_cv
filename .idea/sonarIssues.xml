@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../TExAPITestDiegoFurtado/project/src/AppBundle/DataFixtures/Faker/Provider/FooProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.gitignore">
           <value>
             <set />
@@ -68,6 +73,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/ControllerAbstract.php">
           <value>
             <set />
@@ -79,6 +89,46 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/DataFixtures/Faker/Provider/FooProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/Faker/Provider/FooProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/Provider/EntityProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/orm/EntityProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/orm/FooProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/orm/entityProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/orm/fixtures.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Resources/fixtures/provider/EntityProvider.php">
           <value>
             <set />
           </value>
