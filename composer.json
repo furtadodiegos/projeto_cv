@@ -57,13 +57,12 @@
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
     ],
     "projeto-scripts": [
-      "php -r \"shell_exec('bin/console app:get-parameters');\"",
-      "php -r \"shell_exec('bin/console doctrine:database:create');\"",
-      "php -r \"shell_exec('bin/console doctrine:schema:update --force --dump-sql');\""
+      "php bin/console app:get-parameters",
+      "php bin/console doctrine:database:create",
+      "php bin/console doctrine:schema:update --force --dump-sql"
     ],
     "post-install-cmd": [
-      "@symfony-scripts",
-      "@projeto-scripts"
+      "@symfony-scripts"
     ],
     "post-update-cmd": [
       "@symfony-scripts"
