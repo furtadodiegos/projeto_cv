@@ -19,3 +19,4 @@
 .idea/*
 .idea/projeto_cv.iml
 .idea/workspace.xml
+!.idea/workspace.xml
