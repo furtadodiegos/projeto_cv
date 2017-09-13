@@ -33,6 +33,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Command/BuildParameters.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Command/generateParameters.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/Commands/generateParametersCommand.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Command/generateParameters.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Entity/Carro.php">
           <value>
             <set />
@@ -59,6 +79,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Entity/UsuarioInfo.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
           <value>
             <set />
           </value>
