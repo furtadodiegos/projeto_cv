@@ -15,7 +15,7 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-!.idea
-!.idea/*
-!.idea/workspace.xml
-!.idea/sonarIssues.xml
+.idea
+.idea/*
+.idea/workspace.xml
+.idea/sonarIssues.xml
