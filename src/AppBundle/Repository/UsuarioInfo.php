@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Repository;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * UsuarioInfo
@@ -10,4 +11,19 @@ namespace AppBundle\Repository;
  */
 class UsuarioInfo extends \Doctrine\ORM\EntityRepository
 {
+
+    public function persistUsuarioInfo($params, \AppBundle\Entity\UsuarioInfo $usuarioInfo)
+    {
+        try {
+            $usuarioInfo
+                ->setStrNome($params->get('strNome'))
+                ->setStrSobrenome($params->get('strSobrenome'))
+                ->setDatNascimento(new \DateTime($params->get('datNascimento')))
+                ->setUsuario($params->get('usuario'));
+
+            return $usuarioInfo;
+        } catch (\Exception $e) {
+            throw new HttpException(500, $e->getMessage());
+        }
+    }
 }
