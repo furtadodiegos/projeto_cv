@@ -5,7 +5,7 @@ parameters:
 #
 services:
     data_fixtures.provider.foo:
-        class: AbstractBundle\Resources\fixtures\provider\EntityProvider
+        class: AbstractBundle\Resources\fixtures\Provider\EntityProvider
         tags: [ { name: nelmio_alice.faker.provider } ]
 #    # default configuration for services in *this* file
 #    _defaults:

@@ -15,27 +15,27 @@ use Symfony\Component\HttpFoundation\Request;
 interface InterfaceController
 {
     /**
-     * @Rest\Get("/Route")
+     * @Rest\Get("/Request")
      */
     public function getAction();
 
     /**
-     * @Rest\Get("/Route/{param}")
+     * @Rest\Get("/Request/{param}")
      */
     public function getParamAction($param);
 
     /**
-     * @Rest\Post("/Route")
+     * @Rest\Post("/Request")
      */
     public function postAction(Request $request);
 
     /**
-     * @Rest\Put("/Route/{id}")
+     * @Rest\Put("/Request/{id}")
      */
     public function putAction(Request $request, $id);
 
     /**
-     * @Rest\Delete("/Route/{id}")
+     * @Rest\Delete("/Request/{id}")
      */
     public function deleteAction($id);
 }

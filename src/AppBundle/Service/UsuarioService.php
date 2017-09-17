@@ -11,8 +11,7 @@ namespace AppBundle\Service;
 
 use AbstractBundle\Service\AbstractService;
 use AbstractBundle\Service\InterfaceService;
-use Doctrine\ORM\EntityRepository;
-use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity\Usuario;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use JMS\DiExtraBundle\Annotation as DI;
 
@@ -42,19 +41,65 @@ class UsuarioService extends AbstractService implements InterfaceService
         // TODO: Implement getOneBy() method.
     }
 
+    public function checkUsuario($email)
+    {
+        return
+            $this->repository->findOneBy(['strEmail' => $email]);
+    }
+
+    /**
+     * @param $params
+     * @param null $entity
+     * @return Usuario
+     */
     public function prepare($params, $entity = null)
     {
-        // TODO: Implement prepare() method.
+        if ($entity === null) {
+            $entity = new Usuario();
+            $params = $this->encode($params, $entity->getStrSalt());
+        }
+
+        return
+            $this->repository->persistUsuario($params, $entity);
     }
 
-    public function isValid($params)
+    public function isValid($entity)
     {
-        // TODO: Implement isValid() method.
+        $validator = $this->container->get('validator');
+        $errors = $validator->validate($entity);
+
+        if (count($errors)) {
+            $message = $this->getErrorMessages($errors);
+
+            throw new HttpException(400, end($message));
+        }
+
+        return true;
     }
 
+    /**
+     * @param $params
+     * @return array
+     */
     public function insert($params)
     {
-        // TODO: Implement insert() method.
+        $usuarioEntity = $this->prepare($params);
+
+        $params->set('usuario', $usuarioEntity);
+
+        $usuarioInfoEntity = $this->container->get('usuario_info.service')->prepare($params);
+
+        if ($this->isValid($usuarioEntity) && $this->isValid($usuarioInfoEntity)) {
+            $this->em->persist($usuarioEntity);
+            $this->em->persist($usuarioInfoEntity);
+
+            if ($this->save()) {
+                return array('statusCode' => 201, 'data' => array(
+                    'usuario' => $usuarioEntity,
+                    'usuarioInfo' => $usuarioInfoEntity,
+                ));
+            }
+        }
     }
 
     public function update($params, $id)
@@ -62,9 +107,34 @@ class UsuarioService extends AbstractService implements InterfaceService
         // TODO: Implement update() method.
     }
 
+    /**
+     * @return bool
+     */
+    private function save()
+    {
+        try{
+            $this->em->flush();
+        } catch (\Exception $e) {
+            throw new HttpException(500, $e->getMessage());
+        }
+
+        return true;
+    }
+
     public function delete($id)
     {
         // TODO: Implement delete() method.
+    }
+
+    private function encode($params, $salt)
+    {
+        $plainPassword = hash('sha256', $salt . $params->get('strSenha'));
+        $encoded = hash('sha256', $salt . $plainPassword);
+
+        $params->set('strPlainPassword', $plainPassword);
+        $params->set('strSenha', $encoded);
+
+        return $params;
     }
 
 }

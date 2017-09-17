@@ -3,12 +3,18 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Usuario
  *
  * @ORM\Table(name="usuario", uniqueConstraints={@ORM\UniqueConstraint(name="id_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="email_UNIQUE", columns={"str_email"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\Usuario")
+ * @UniqueEntity(
+ *      fields={"strEmail"},
+ *      message="Este email já está sendo usado."
+ * )
  */
 class Usuario
 {
@@ -25,6 +31,11 @@ class Usuario
      * @var string
      *
      * @ORM\Column(name="str_email", type="string", length=155, nullable=false)
+     * @Assert\NotBlank(message="O email '{{ value }}' é inválido.")
+     * @Assert\Email(
+     *      message="O Campo email não est",
+     *      checkMX = true
+     * )
      */
     private $strEmail;
 
@@ -35,7 +46,25 @@ class Usuario
      */
     private $strSenha;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="str_salt", type="string", length=155, nullable=false)
+     */
+    private $strSalt;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="str_plain_password", type="string", length=155, nullable=false)
+     */
+    private $strPlainPassword;
+
+
+    public function __construct()
+    {
+        $this->strSalt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
+    }
 
     /**
      * Get id
@@ -94,4 +123,37 @@ class Usuario
     {
         return $this->strSenha;
     }
+
+    /**
+     * @return string
+     */
+    public function getStrSalt()
+    {
+        return $this->strSalt;
+    }
+
+    /**
+     * @param string $strSalt
+     */
+    public function setStrSalt($strSalt)
+    {
+        $this->strSalt = $strSalt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStrPlainPassword()
+    {
+        return $this->strPlainPassword;
+    }
+
+    /**
+     * @param string $strPlainPassword
+     */
+    public function setStrPlainPassword($strPlainPassword)
+    {
+        $this->strPlainPassword = $strPlainPassword;
+    }
+
 }

@@ -3,7 +3,11 @@
 namespace AbstractBundle\Controller;
 
 
+use AbstractBundle\security\ApiAuth;
 use JMS\Serializer\SerializationContext;
+use Symfony\Component\HttpFoundation\ParameterBag;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
@@ -12,6 +16,17 @@ use FOS\RestBundle\Controller\FOSRestController;
 
 abstract class AbstractController extends FOSRestController
 {
+
+    /**
+     * @var ApiAuth
+     */
+    protected $apiAuth;
+
+    public function __construct()
+    {
+        $this->apiAuth = new ApiAuth(123);
+    }
+
     /**
      * Return container service
      *
@@ -61,5 +76,27 @@ abstract class AbstractController extends FOSRestController
         $context[] = $serialization;
 
         return $serializer->serialize($data, $format, $context);
+    }
+
+    protected function userSecurity($authorization)
+    {
+        if (!$this->apiAuth->checkCredentials($authorization)) {
+            throw new HttpException(401, 'Acesso nao autorizado!');
+        }
+    }
+
+    protected function decodeRequestDataIntoParameters(Request $request)
+    {
+        if (!$request->get('data')) {
+            $data = array();
+        } else {
+            $data = json_decode($request->get('data'), true);
+
+            if ($data === null) {
+                throw new HttpException(400, 'Sem conteudo valido!');
+            }
+        }
+
+        return new ParameterBag($data);
     }
 }

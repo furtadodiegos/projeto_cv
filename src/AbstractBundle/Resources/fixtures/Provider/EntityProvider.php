@@ -6,7 +6,7 @@
  * Time: 16:39
  */
 
-namespace AbstractBundle\Resources\fixtures\provider;
+namespace AbstractBundle\Resources\fixtures\Provider;
 
 
 use Faker\Factory;

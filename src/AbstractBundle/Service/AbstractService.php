@@ -2,6 +2,7 @@
 
 namespace AbstractBundle\Service;
 
+
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 use JMS\DiExtraBundle\Annotation as DI;
@@ -24,6 +25,12 @@ abstract class AbstractService
      * @var \Doctrine\ORM\EntityRepository
      */
     protected $repository;
+
+    /**
+     * @var Container
+     */
+    protected $container;
+
 
     /**
      * @DI\InjectParams({

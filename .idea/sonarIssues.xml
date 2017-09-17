@@ -3,12 +3,32 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$USER_HOME$/Downloads/KnpU/rest-ep2/finish/src/KnpU/CodeBattle/Controller/BaseController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/KnpU/symfony-rest4/finish/tests/AppBundle/Controller/Api/ProgrammerControllerTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../TExAPITestDiegoFurtado/project/composer.json">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../TExAPITestDiegoFurtado/project/src/AppBundle/DataFixtures/Faker/Provider/FooProvider.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../gesconApi/gesconProject/dnit/www/gescon2_0/app/views/relatorios/index.ctp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ionic/KeGLaB/html/ionic-essential/iziBeauty/www/index.html">
           <value>
             <set />
           </value>
@@ -54,6 +74,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/composer.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/phpunit.xml.dist">
           <value>
             <set />
           </value>
@@ -143,12 +168,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AbstractBundle/security/ApiAuth.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Command/generateParameters.php">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Controller/Api/UsuarioController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Controller/UsuarioController.php">
           <value>
             <set />
           </value>
@@ -183,12 +218,47 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Repository/Usuario.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Repository/UsuarioInfo.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Service/UsuarioInfoService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/AppBundle/Service/UsuarioService.php">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/AppBundle/Test/ApiTestCase.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tests/AppBundle/Controller/Api/UsuarioControllerTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/AppBundle/Controller/UsuarioControllerTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/web/app_test.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sym3/html/appsyStudio/src/AppBundle/Controller/AgendaController.php">
           <value>
             <set />
           </value>

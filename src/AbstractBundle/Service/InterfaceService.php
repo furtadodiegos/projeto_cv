@@ -10,6 +10,7 @@ namespace AbstractBundle\Service;
 
 
 use \Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraint as Assert;
@@ -23,7 +24,7 @@ interface InterfaceService
     public function getAll();
 
     /**
-     * @param $id
+     * @param $param
      * @return mixed
      */
     public function getOneBy($param);
@@ -31,7 +32,7 @@ interface InterfaceService
     /**
      * @param $params
      * @param null $entity
-     * @return EntityRepository
+     * @return ParameterBag
      */
     public function prepare($params, $entity = null);
 
