@@ -410,8 +410,8 @@
     <parameter key="jms_di_extra.disable_grep">false</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
     <parameter key="jms_di_extra.cache_warmer.controller_file_blacklist" type="collection"/>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/html/api_project/var/cache/test/jms_diextra/doctrine/EntityManager_5a462dc215759.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5a462dc215759_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/html/api_project/var/cache/test/jms_diextra/doctrine/EntityManager_5a4641eeb08db.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5a4641eeb08db_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="jms_aop.cache_dir">/var/www/html/api_project/var/cache/test/jms_aop</parameter>
     <parameter key="jms_aop.interceptor_loader.class">JMS\AopBundle\Aop\InterceptorLoader</parameter>
     <parameter key="jms_serializer.form_error_handler.class">JMS\Serializer\Handler\FormErrorHandler</parameter>
@@ -758,7 +758,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <argument>/var/www/html/api_project/var/cache/test/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -768,7 +768,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2396,12 +2396,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a462dc2033034.27807478</argument>
+      <argument>5a4641ee9fb7c5.98426120</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a462dc2033034.27807478</argument>
+      <argument>5a4641ee9fb7c5.98426120</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3086,8 +3086,8 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager5a462dc215759_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/var/www/html/api_project/var/cache/test/jms_diextra/doctrine/EntityManager_5a462dc215759.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager5a4641eeb08db_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/var/www/html/api_project/var/cache/test/jms_diextra/doctrine/EntityManager_5a4641eeb08db.php</file>
       <argument type="service" id="doctrine.orm.default_entity_manager.delegate"/>
       <argument type="service" id="service_container"/>
     </service>
@@ -4844,7 +4844,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>24QJjyYiLI</argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <argument>/var/www/html/api_project/var/cache/test/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4852,7 +4852,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>887R1fH6bb</argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <argument>/var/www/html/api_project/var/cache/test/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4860,7 +4860,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>g13Ihx+Orc</argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <argument>/var/www/html/api_project/var/cache/test/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4868,7 +4868,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>rvDTXwTpfY</argument>
       <argument>0</argument>
-      <argument>6Q-auIqBQGs8rav54tOSmj</argument>
+      <argument>2yUn9WNQf8GYpHNnK25EwF</argument>
       <argument>/var/www/html/api_project/var/cache/test/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

@@ -24,7 +24,7 @@ abstract class AbstractController extends FOSRestController
 
     public function __construct()
     {
-        $this->apiAuth = new ApiAuth(123);
+//        $this->apiAuth = new ApiAuth(123);
     }
 
     /**

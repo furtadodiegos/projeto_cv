@@ -11,6 +11,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class UserController extends AbstractController implements InterfaceController
 {
+    protected $securityRoutes;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->securityRoutes = [
+            'add', 'insert', 'edit'
+        ];
+    }
+
     /**
      * @Rest\Get("/user")
      */
@@ -49,9 +60,8 @@ class UserController extends AbstractController implements InterfaceController
      */
     public function insertAction(Request $request)
     {
-//        $this->userSecurity($request->headers->get('Authorization'));
         $data = $this->decodeRequestDataIntoParameters($request);
-        
+
         $response = $this->service()->insert($data);
 
         return

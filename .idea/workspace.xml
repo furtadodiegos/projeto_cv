@@ -2,54 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3fa6f2d-7eb0-4334-a679-066e079b76b6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/api_project.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AbstractBundle/Repository/AbstractRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/default.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/DateFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/GenerateForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/composerJson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/projeto_cv.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DoctrineMigrations/Version20170913234859.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/Carro.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/Categoria.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/Montadora.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/Pedido.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/Usuario.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AbstractBundle/Resources/config/doctrine/metadata/orm/UsuarioInfo.orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UsuarioController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Carro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Categoria.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Montadora.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Pedido.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Usuario.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/UsuarioInfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/Carro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/Categoria.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/Montadora.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/Pedido.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/Usuario.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/UsuarioInfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/UsuarioInfoService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/UsuarioService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/UsuarioControllerTest.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Test/ApiTestCase.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AbstractBundle-Service-AbstractService.cache.php" afterPath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AbstractBundle-Service-AbstractService.cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AppBundle-Service-UserService.cache.php" afterPath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AppBundle-Service-UserService.cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/-/M/YYL50SJLFy4IQGx-lT9g" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/-/M/YYL50SJLFy4IQGx-lT9g" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/7/X/FY5DW+0hrp1j+BeHhX8A" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/7/X/FY5DW+0hrp1j+BeHhX8A" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/A/O/PLWpXXT8H7BFYxjDwrMT" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/A/O/PLWpXXT8H7BFYxjDwrMT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/B/P7mxXzsxVoJNzdcdnEVc" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/B/P7mxXzsxVoJNzdcdnEVc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/T/r91nhxazvv25hPP7Oqmj" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/T/r91nhxazvv25hPP7Oqmj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/C/S/y5cePM-INrYEsICtZEcC" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/C/S/y5cePM-INrYEsICtZEcC" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/E/5/QdSpKS5mc61PwhJZRqnk" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/E/5/QdSpKS5mc61PwhJZRqnk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/F/N/82e57gbYC0COCzpUGhbO" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/F/N/82e57gbYC0COCzpUGhbO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/H/S/5IJNwTuQuUn-h1FN5Lkf" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/H/S/5IJNwTuQuUn-h1FN5Lkf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/S/q1-hZvjUyTc7VAsm4nhR" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/S/q1-hZvjUyTc7VAsm4nhR" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/D/KPBK4l0EVeDAm9ejKPu-" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/D/KPBK4l0EVeDAm9ejKPu-" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/R/XUN4yv8vVHG8lrCOBuUg" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/R/XUN4yv8vVHG8lrCOBuUg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/M/W/PQPJIRWH8D2hfQilAPs0" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/M/W/PQPJIRWH8D2hfQilAPs0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/N/R/moVOt5LqTQZm3vwCfsI1" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/N/R/moVOt5LqTQZm3vwCfsI1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/J/uSXz9OrSzWt1nYVOoo8f" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/J/uSXz9OrSzWt1nYVOoo8f" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/R/L/+Tx3GfUmpMMsXTTGj-qg" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/R/L/+Tx3GfUmpMMsXTTGj-qg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/OEct7AGVVA94w9DBILZl" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/OEct7AGVVA94w9DBILZl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/mkjkuBt79Ow7iAbGqhkU" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/mkjkuBt79Ow7iAbGqhkU" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Y/B/MICRPhdkfWiF7DWX-IYP" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Y/B/MICRPhdkfWiF7DWX-IYP" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/test.log" afterPath="$PROJECT_DIR$/var/logs/test.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,25 +51,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/UserService.php">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+            <state relative-caret-position="260">
+              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding>
-                <element signature="e#120#169#0#PHP" expanded="true" />
+                <element signature="e#41#90#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <file leaf-file-name="AbstractController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="-280">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
-                <element signature="e#41#90#0#PHP" expanded="true" />
+                <element signature="e#46#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +78,8 @@
       <file leaf-file-name="UserControllerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="-650">
+              <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -127,6 +107,9 @@
       <find>entityService</find>
       <find>setRepository</find>
       <find>$_classMethods</find>
+      <find>conta</find>
+      <find>this-&gt;get</find>
+      <find>service_container</find>
     </findStrings>
     <replaceStrings>
       <replace>Request</replace>
@@ -147,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/DateFormat.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Usuario.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Resources/config/default.sql" />
-        <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/MigrationVersions.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Order.php" />
@@ -160,14 +142,15 @@
         <option value="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/GenerateEntity.php" />
-        <option value="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/GenerateProperties.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Repository/AbstractRepository.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" />
+        <option value="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
       </list>
     </option>
   </component>
@@ -358,76 +341,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="traits" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -547,12 +460,12 @@
       <workItem from="1514405160956" duration="5000" />
       <workItem from="1514405197361" duration="117000" />
       <workItem from="1514405363008" duration="58000" />
-      <workItem from="1514405432778" duration="34361000" />
+      <workItem from="1514405432778" duration="41427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34702000" />
+    <option name="totallyTimeSpent" value="41768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -779,14 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="78" column="23" lean-forward="false" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Mapping/ClassMetadataInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -826,7 +731,7 @@
         <state relative-caret-position="120">
           <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding>
-            <element signature="e#286#329#0#PHP" expanded="true" />
+            <element signature="e#286#329#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -885,14 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="15" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Repository/AbstractRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -913,34 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-          <folding>
-            <element signature="e#43#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#90#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -951,12 +820,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Controller/FOSRestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
             <element signature="e#120#169#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-994">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="6" column="74" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-280">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-650">
+          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding>
+            <element signature="e#41#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

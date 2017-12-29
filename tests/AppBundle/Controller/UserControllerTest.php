@@ -19,6 +19,18 @@ class UserControllerTest extends ApiTestCase
         parent::setUp();
 
         $this->client = $this->createClient();
+
+        $this->createUserAdmin([
+            'email' => 'admin@email.com',
+            'password' => '654321'
+        ]);
+    }
+
+    public function createUserAdmin($user)
+    {
+        $this->client->request('POST', '/user/insert', [
+            'data' => json_encode($user)
+        ]);
     }
 
     public function userProvider()
@@ -55,6 +67,7 @@ class UserControllerTest extends ApiTestCase
      */
     public function testInsert($userProvider)
     {
+        //Pega o formulario
         $this->client->request('GET', '/user/add');
         $form = $this->getData();
         $post = [];
@@ -63,12 +76,21 @@ class UserControllerTest extends ApiTestCase
             $post[$key] = $userProvider[$key];
         }
 
+        //Salva o formulario
         $this->client->request('POST', '/user/insert', [
             'data' => json_encode($post)
         ]);
         $reponse = $this->getData();
 
-        echo "<pre>";
-        \Doctrine\Common\Util\Debug::dump($reponse);die;
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(201, $this->getResponse()->getStatusCode());
+        $this->assertArrayHasKey('user', $reponse);
+
+        //Erro: Tenta salvar um email q ja existe
+        $this->client->request('POST', '/user/insert', [
+            'data' => json_encode($post)
+        ]);
+
+        $this->assertEquals(400, $this->getResponse()->getStatusCode());
     }
 }
