@@ -15,27 +15,43 @@ use Symfony\Component\HttpFoundation\Request;
 interface InterfaceController
 {
     /**
-     * @Rest\Get("/Request")
+     * @Rest\Get("/Route")
      */
-    public function getAction();
+    public function indexAction();
 
     /**
-     * @Rest\Get("/Request/{param}")
+     * @Rest\Get("/Route/{search}/{param}")
      */
-    public function getParamAction($param);
+    public function viewAction($search, $param);
 
     /**
-     * @Rest\Post("/Request")
+     * @Rest\Get("/Route")
      */
-    public function postAction(Request $request);
+    public function addAction();
 
     /**
-     * @Rest\Put("/Request/{id}")
+     * @Rest\Post("/Route")
      */
-    public function putAction(Request $request, $id);
+    public function insertAction(Request $request);
 
     /**
-     * @Rest\Delete("/Request/{id}")
+     * @Rest\Get("/Route/{id}")
+     */
+    public function editAction($id);
+
+    /**
+     * @Rest\Post("/Route")
+     */
+    public function updateAction(Request $request);
+
+    /**
+     * @Rest\Delete("/Route/{id}")
      */
     public function deleteAction($id);
+
+    /**
+     * @param null $service
+     * @return mixed
+     */
+    public function service($service = null);
 }
