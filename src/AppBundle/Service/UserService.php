@@ -48,6 +48,17 @@ class UserService extends AbstractService implements InterfaceService
     }
 
     /**
+     * @param $search
+     * @param $param
+     * @return null|object|User
+     */
+    public function getOneBy($search, $param)
+    {
+        return
+            $this->repository()->findOneBy([$search => $param]);
+    }
+
+    /**
      * @param $entity
      * @return boolean|HttpException
      */
@@ -90,24 +101,25 @@ class UserService extends AbstractService implements InterfaceService
         $user = new User();
         $params = $this->encode($params, $user->getSalt());
 
-        $emUser = $this->repository()->persist($params, $user);
-
-        if ($this->isValid($emUser)) {
-            $dataEntity = ['user' => $emUser];
-
-            if ($this->save($dataEntity)) {
-                return array('statusCode' => 201, 'data' => $dataEntity);
-            }
-        }
+        return
+            $this->transaction($this->repository()->persist($params, $user), 201);
     }
 
     /**
-     * @param $params
+     * @param $params ParameterBag
      * @return array
      */
     public function update($params)
     {
-        // TODO: Implement update() method.
+        /*** @var $user User */
+        $user = $this->repository()->find($params->get('id'));
+
+        if ($params->get('password')) {
+            $params = $this->encode($params, $user->getSalt());
+        }
+
+        return
+            $this->transaction($this->repository()->persist($params, $user), 200);
     }
 
     /**
@@ -117,6 +129,31 @@ class UserService extends AbstractService implements InterfaceService
     public function delete($params)
     {
         // TODO: Implement delete() method.
+    }
+
+    /**
+     * @param $entity
+     * @param $successCode
+     * @return array
+     */
+    private function transaction($entity, $successCode)
+    {
+        try {
+            if ($this->isValid($entity)) {
+                $dataEntity = ['user' => $entity];
+
+                if ($this->save($dataEntity)) {
+                    return [
+                        'statusCode' => $successCode,
+                        'data' => $dataEntity
+                    ];
+                }
+            }
+        } catch (HttpException $he) {
+            throw new HttpException($he->getStatusCode(), $he->getMessage());
+        } catch (\Exception $e) {
+            throw new HttpException(500, 'Internal error!');
+        }
     }
 
     /**

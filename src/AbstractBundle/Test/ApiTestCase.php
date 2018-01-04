@@ -9,7 +9,6 @@
 namespace AbstractBundle\Test;
 
 
-use AbstractBundle\security\ApiAuth;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -79,24 +78,17 @@ class ApiTestCase extends KernelTestCase
     }
 
     /**
-     * @return array
+     * @param array $data
+     * @return string
      */
-    protected function getAuthorizedToken()
+    protected function getAuthorizedToken(array $data)
     {
-        $data = array(
-            'strEmail' => 'foo@email.com',
-            'strSenha' => '123',
-            'hash' => true
-        );
+        $this->client->request('POST', '/login', [
+            'data' => json_encode($data)
+        ]);
+        $response = $this->getData();
 
-        $usuario = $this->getService('usuario.service')->checkUsuario($data['strEmail']);
-
-        $auth = new ApiAuth(123);
-
-        $response = $auth->singup($usuario, $data['strSenha'],$data['hash']);
-
-        $token = 'Bearer '.$response->getContent();
-
-        return $token;
+        return
+            'Bearer '. $response['content'];
     }
 }

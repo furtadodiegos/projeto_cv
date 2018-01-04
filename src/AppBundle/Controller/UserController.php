@@ -5,22 +5,16 @@ namespace AppBundle\Controller;
 
 use AbstractBundle\Controller\AbstractController;
 use AbstractBundle\Controller\InterfaceController;
+//use AbstractBundle\Resources\traits\Security;
 use AppBundle\Service\UserService;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class UserController extends AbstractController implements InterfaceController
 {
-    protected $securityRoutes;
 
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->securityRoutes = [
-            'add', 'insert', 'edit'
-        ];
-    }
+//    use Security;
 
     /**
      * @Rest\Get("/user")
@@ -69,19 +63,45 @@ class UserController extends AbstractController implements InterfaceController
     }
 
     /**
-     * @Rest\Get("/Route/{id}")
+     * @Rest\Get("/user/edit/{id}")
      */
-    public function editAction($id)
+    public function editAction(Request $request, $id)
     {
-        // TODO: Implement editAction() method.
+        $authorization = $request->headers->get('Authorization');
+
+        $this->security($authorization);
+
+        $userId = $this->getUserFromToken($authorization);
+
+        $form = $this->service()->getForm()['data'];
+        unset($form['salt']);
+        unset($form['plainPassword']);
+
+        $response = [
+            'data' => [
+                'form' => $form,
+                'user' => $this->service()->getOneBy('id', $userId->data->id)
+            ],
+            'statusCode' => 200
+        ];
+
+        return
+            $this->renderResponse($response['data'], $response['statusCode']);
     }
 
     /**
-     * @Rest\Post("/Route")
+     * @Rest\Post("/user/update")
      */
     public function updateAction(Request $request)
     {
-        // TODO: Implement updateAction() method.
+        $this->security($request->headers->get('Authorization'));
+
+        $data = $this->decodeRequestDataIntoParameters($request);
+
+        $response = $this->service()->update($data);
+
+        return
+            $this->renderResponse($response['data'], $response['statusCode']);
     }
 
     /**
@@ -102,4 +122,12 @@ class UserController extends AbstractController implements InterfaceController
             $this->getService();
     }
 
+    private function security($authorization)
+    {
+        $key = $this->getParameter('secret');   //Chave de acesso
+
+        if (!$this->checkCredentials($authorization, $key)) {
+            throw new HttpException(401, 'Unauthorized access!');
+        }
+    }
 }

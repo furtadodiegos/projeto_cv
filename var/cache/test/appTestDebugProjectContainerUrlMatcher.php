@@ -123,6 +123,17 @@ class appTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
         }
         not_app_default_index:
 
+        // app_login_login
+        if ('/login' === $pathinfo) {
+            if ('POST' !== $canonicalMethod) {
+                $allow[] = 'POST';
+                goto not_app_login_login;
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\LoginController::loginAction',  '_format' => 'json',  '_route' => 'app_login_login',);
+        }
+        not_app_login_login:
+
         if (0 === strpos($pathinfo, '/user')) {
             // app_user_index
             if ('/user' === $pathinfo) {
@@ -157,6 +168,28 @@ class appTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
             }
             not_app_user_insert:
 
+            // app_user_edit
+            if (0 === strpos($pathinfo, '/user/edit') && preg_match('#^/user/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_app_user_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_edit')), array (  '_controller' => 'AppBundle\\Controller\\UserController::editAction',  '_format' => 'json',));
+            }
+            not_app_user_edit:
+
+            // app_user_update
+            if ('/user/update' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_app_user_update;
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\UserController::updateAction',  '_format' => 'json',  '_route' => 'app_user_update',);
+            }
+            not_app_user_update:
+
         }
 
         elseif (0 === strpos($pathinfo, '/Route')) {
@@ -170,28 +203,6 @@ class appTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_view')), array (  '_controller' => 'AppBundle\\Controller\\UserController::viewAction',  '_format' => 'json',));
             }
             not_app_user_view:
-
-            // app_user_edit
-            if (preg_match('#^/Route/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_app_user_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_edit')), array (  '_controller' => 'AppBundle\\Controller\\UserController::editAction',  '_format' => 'json',));
-            }
-            not_app_user_edit:
-
-            // app_user_update
-            if ('/Route' === $pathinfo) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_app_user_update;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\UserController::updateAction',  '_format' => 'json',  '_route' => 'app_user_update',);
-            }
-            not_app_user_update:
 
             // app_user_delete
             if (preg_match('#^/Route/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {

@@ -80,11 +80,12 @@ class UserControllerTest extends ApiTestCase
         $this->client->request('POST', '/user/insert', [
             'data' => json_encode($post)
         ]);
-        $reponse = $this->getData();
+
+        $response = $this->getData();
 
         $this->assertTrue($this->getResponse()->isSuccessful());
         $this->assertEquals(201, $this->getResponse()->getStatusCode());
-        $this->assertArrayHasKey('user', $reponse);
+        $this->assertArrayHasKey('user', $response);
 
         //Erro: Tenta salvar um email q ja existe
         $this->client->request('POST', '/user/insert', [
@@ -93,4 +94,132 @@ class UserControllerTest extends ApiTestCase
 
         $this->assertEquals(400, $this->getResponse()->getStatusCode());
     }
+
+    public function testEdit()
+    {
+        $this->client->request('GET', '/user/edit/null', [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => 'admin@email.com',
+                    'password' => '654321',
+                    'hash' => true
+                ])
+            ]);
+        $response = $this->getData();
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+        $this->assertArrayHasKey('form', $response);
+        $this->assertArrayHasKey('user', $response);
+    }
+
+    public function testUpdate()
+    {
+        $this->client->request('GET', '/user/edit/null', [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => 'admin@email.com',
+                    'password' => '654321',
+                    'hash' => true
+                ])
+            ]);
+        $response = $this->getData();
+
+        $form = $response['form'];
+        $user = $response['user'];
+        $post = [];
+
+        foreach ($form as $key => $value) {
+            $post[$key] = $user[$key];
+        }
+
+        unset($post['password']);
+        $post['email'] = 'admin2@email.com';
+
+        $this->client->request('POST', '/user/update', [
+            'data' => json_encode($post)
+        ], [], [
+            'CONTENT_TYPE' => 'application/json',
+            'HTTP_Authorization' => $this->getAuthorizedToken([
+                'email' => 'admin@email.com',
+                'password' => '654321',
+                'hash' => true
+            ])
+        ]);
+        $response = $this->getData();
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+        $this->assertArrayHasKey('user', $response);
+
+        $this->client->request('GET', '/user/edit/null', [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => $response['user']['email'],
+                    'password' => '654321',
+                    'hash' => true
+                ])
+            ]);
+        $response = $this->getData();
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+        $this->assertArrayHasKey('form', $response);
+        $this->assertArrayHasKey('user', $response);
+
+//
+        unset($response['user']['salt']);
+        unset($response['user']['plainPassword']);
+        $response['user']['password'] = '65432';
+
+        $this->client->request('POST', '/user/update', [
+            'data' => json_encode($response['user'])
+        ], [], [
+            'CONTENT_TYPE' => 'application/json',
+            'HTTP_Authorization' => $this->getAuthorizedToken([
+                'email' => $response['user']['email'],
+                'password' => '654321',
+                'hash' => true
+            ])
+        ]);
+        $response = $this->getData();
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+        $this->assertArrayHasKey('user', $response);
+//
+
+//
+        $this->client->request('GET', '/user/edit/null', [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => $response['user']['email'],
+                    'password' => '65432',
+                    'hash' => true
+                ])
+            ]);
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+//
+
+//
+        $this->client->request('GET', '/user/edit/null', [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => $response['user']['email'],
+                    'password' => '6543',
+                    'hash' => true
+                ])
+            ]);
+
+        $this->assertEquals(500, $this->getResponse()->getStatusCode());
+//
+    }
+
 }

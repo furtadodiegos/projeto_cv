@@ -37,7 +37,7 @@ interface InterfaceController
     /**
      * @Rest\Get("/Route/{id}")
      */
-    public function editAction($id);
+    public function editAction(Request $request, $id);
 
     /**
      * @Rest\Post("/Route")

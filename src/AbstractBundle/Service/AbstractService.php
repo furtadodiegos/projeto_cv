@@ -75,6 +75,7 @@ abstract class AbstractService
     }
 
     /**
+     * @param array $entities
      * @return bool
      */
     protected function save(array $entities)

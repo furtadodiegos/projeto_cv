@@ -6,48 +6,42 @@
  * Time: 19:37
  */
 
-namespace AbstractBundle\security;
+namespace AbstractBundle\Resources\traits;
 
 
-use AppBundle\Entity\Usuario;
 use Firebase\JWT\JWT;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 
-class ApiAuth
+trait Security
 {
-
     /**
-     * @var
+     * @param array $data
+     * @param $key
+     * @param $host
+     * @param $hash
+     * @return JsonResponse
      */
-    protected $key;
-
-    public function __construct($key)
+    protected function newToken(array $data, $key, $host, $hash = null)
     {
-        $this->key = $key;
-    }
-
-    public function singup(Usuario $user, $password, $getHash = false)
-    {
-        $key = $this->key;
-        $plainPassword = $this->encodePassword($password, $user->getStrSalt());
-        $encoded = $this->encodePassword($plainPassword, $user->getStrSalt());
-
-        if (!$this->isPasswordValid($encoded, $user->getStrPlainPassword(), $user->getStrSalt())) {
-            throw new HttpException(401, 'Usuario nao autorizado!');
-        }
+        $issuedAt   = time();
+        $notBefore  = $issuedAt + 10; //Adding 10 seconds
+        $expire     = $notBefore + 60; // Adding 60 seconds
 
         $token = array(
-            'sub' => $user->getId(),
-            'email' => $user->getStrEmail(),
-            'iat' => time(),
-            'exp' => time() + (24 * 24 * 60 * 60)
+            'iat' => $issuedAt,
+            'jti' => $key,
+            'iss' => $host,
+            'nbf' => $notBefore,
+            'exp' => $expire,
+            'data' => $data
         );
+
+        JWT::$leeway = 10;
 
         $jwt = JWT::encode($token, $key, 'HS256');
         $decode = JWT::decode($jwt, $key, array('HS256'));
 
-        $response = ($getHash) ? $jwt : $decode;
+        $response = ($hash) ? $jwt : $decode;
 
         return new JsonResponse($response);
     }
@@ -58,7 +52,7 @@ class ApiAuth
      * @param $salt
      * @return bool
      */
-    private function isPasswordValid($encoded, $raw, $salt)
+    protected function isPasswordValid($encoded, $raw, $salt)
     {
         return $encoded === $this->encodePassword($raw, $salt);
     }
@@ -68,7 +62,7 @@ class ApiAuth
      * @param $salt
      * @return string
      */
-    private function encodePassword($raw, $salt)
+    protected function encodePassword($raw, $salt)
     {
         return hash('sha256', $salt . $raw);
     }
@@ -77,7 +71,7 @@ class ApiAuth
      * @param $authorization
      * @return null
      */
-    private function getBearerToken($authorization)
+    protected function getBearerToken($authorization)
     {
         if (preg_match('/Bearer\s(\S+)/', $authorization, $matches)) {
             return str_replace('"', '', $matches[1]);
@@ -86,24 +80,28 @@ class ApiAuth
         return null;
     }
 
-    public function checkCredentials($authorization)
+    /**
+     * @param $authorization
+     * @param $key
+     * @return bool|null
+     */
+    public function checkCredentials($authorization, $key)
     {
         $token = $this->getBearerToken($authorization);
 
-        $authCheck = $this->authCheck($token);
+        $authCheck = $this->authCheck($token, $key);
 
         return
-            ($authCheck == true) ? $this->authCheck($token, true) : null;
+            ($authCheck == true) ? $this->authCheck($token, $key, true) : null;
     }
 
     /**
-     * Check Hash
-     *
      * @param $hash
-     * @param bool|false $getIdentity
-     * @return bool
+     * @param $key
+     * @param bool $getIdentity
+     * @return bool|object
      */
-    private function authCheck($hash, $getIdentity = false)
+    protected function authCheck($hash, $key, $getIdentity = false)
     {
         $auth = false;
 
@@ -111,12 +109,12 @@ class ApiAuth
 
             if ($getIdentity == false) {
 
-                $check_token = $this->checkToken($hash);
+                $check_token = $this->checkToken($hash, $key);
                 if ($check_token == true) {
                     $auth = true;
                 }
             } else {
-                $check_token = $this->checkToken($hash, true);
+                $check_token = $this->checkToken($hash, $key, true);
 
                 if (is_object($check_token)) {
                     $auth = $check_token;
@@ -129,16 +127,16 @@ class ApiAuth
 
     /**
      * @param $jwt
-     * @param bool|false $getIdentity
+     * @param $key
+     * @param bool $getIdentity
      * @return bool|object
      */
-    public function checkToken($jwt, $getIdentity = false)
+    public function checkToken($jwt, $key, $getIdentity = false)
     {
-        $key = $this->key;
         $auth = false;
         $decode = JWT::decode($jwt, $key, array('HS256'));
 
-        if (isset($decode->sub)) {
+        if (isset($decode->data->id)) {
             $auth = true;
         }
 

@@ -40,13 +40,13 @@ interface InterfaceService
     public function insert($params);
 
     /**
-     * @param $params
+     * @param $params ParameterBag
      * @return array
      */
     public function update($params);
 
     /**
-     * @param $params
+     * @param $params ParameterBag
      * @return array
      */
     public function delete($params);
