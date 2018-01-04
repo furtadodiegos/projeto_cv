@@ -2,51 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3fa6f2d-7eb0-4334-a679-066e079b76b6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/LoginControllerTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AbstractBundle/security/ApiAuth.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/Security.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/api_project.iml" afterPath="$PROJECT_DIR$/.idea/api_project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php" afterPath="$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerUrlMatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerUrlMatcher.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AbstractBundle-Service-AbstractService.cache.php" afterPath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AbstractBundle-Service-AbstractService.cache.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AppBundle-Service-UserService.cache.php" afterPath="$PROJECT_DIR$/var/cache/test/jms_diextra/metadata/AppBundle-Service-UserService.cache.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/-/M/YYL50SJLFy4IQGx-lT9g" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/-/M/YYL50SJLFy4IQGx-lT9g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/2/I/WnKXtJXlb9Rp43X7tgmf" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/2/I/WnKXtJXlb9Rp43X7tgmf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/7/X/FY5DW+0hrp1j+BeHhX8A" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/7/X/FY5DW+0hrp1j+BeHhX8A" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/A/O/PLWpXXT8H7BFYxjDwrMT" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/A/O/PLWpXXT8H7BFYxjDwrMT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/B/P7mxXzsxVoJNzdcdnEVc" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/B/P7mxXzsxVoJNzdcdnEVc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/T/r91nhxazvv25hPP7Oqmj" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/B/T/r91nhxazvv25hPP7Oqmj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/C/S/y5cePM-INrYEsICtZEcC" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/C/S/y5cePM-INrYEsICtZEcC" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/E/5/QdSpKS5mc61PwhJZRqnk" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/E/5/QdSpKS5mc61PwhJZRqnk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/F/N/82e57gbYC0COCzpUGhbO" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/F/N/82e57gbYC0COCzpUGhbO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/H/S/5IJNwTuQuUn-h1FN5Lkf" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/H/S/5IJNwTuQuUn-h1FN5Lkf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/M/tYV6Ctegu16GnQIHxPMw" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/M/tYV6Ctegu16GnQIHxPMw" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/S/q1-hZvjUyTc7VAsm4nhR" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/K/S/q1-hZvjUyTc7VAsm4nhR" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/3/59k3kiG8XV53Gc+SjHOJ" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/3/59k3kiG8XV53Gc+SjHOJ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/D/KPBK4l0EVeDAm9ejKPu-" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/D/KPBK4l0EVeDAm9ejKPu-" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/R/XUN4yv8vVHG8lrCOBuUg" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/L/R/XUN4yv8vVHG8lrCOBuUg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/M/W/PQPJIRWH8D2hfQilAPs0" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/M/W/PQPJIRWH8D2hfQilAPs0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/N/R/moVOt5LqTQZm3vwCfsI1" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/N/R/moVOt5LqTQZm3vwCfsI1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/B/fz698uGD7YaT6LWQbzLR" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/B/fz698uGD7YaT6LWQbzLR" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/J/uSXz9OrSzWt1nYVOoo8f" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/J/uSXz9OrSzWt1nYVOoo8f" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/P/rHhz35gfmF1hANXkInpO" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/O/P/rHhz35gfmF1hANXkInpO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/R/L/+Tx3GfUmpMMsXTTGj-qg" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/R/L/+Tx3GfUmpMMsXTTGj-qg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/OEct7AGVVA94w9DBILZl" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/OEct7AGVVA94w9DBILZl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/mkjkuBt79Ow7iAbGqhkU" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/X/G/mkjkuBt79Ow7iAbGqhkU" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Y/B/MICRPhdkfWiF7DWX-IYP" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Y/B/MICRPhdkfWiF7DWX-IYP" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Z/-/92YDbwE0DsL9zksuV6Gy" afterPath="$PROJECT_DIR$/var/cache/test/pools/rvDTXwTpfY/Z/-/92YDbwE0DsL9zksuV6Gy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/test.log" afterPath="$PROJECT_DIR$/var/logs/test.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +49,8 @@
       <file leaf-file-name="UserService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="104" column="75" lean-forward="false" selection-start-line="104" selection-start-column="75" selection-end-line="104" selection-end-column="75" />
+            <state relative-caret-position="456">
+              <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
               <folding>
                 <element signature="e#120#169#0#PHP" expanded="true" />
               </folding>
@@ -81,11 +58,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AbstractService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
+            <state relative-caret-position="450">
+              <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
               <folding>
                 <element signature="e#41#90#0#PHP" expanded="true" />
               </folding>
@@ -96,21 +83,9 @@
       <file leaf-file-name="UserControllerTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="211" column="13" lean-forward="true" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+            <state relative-caret-position="470">
+              <caret line="261" column="32" lean-forward="false" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiTestCase.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-              <folding>
-                <element signature="e#127#177#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -146,6 +121,7 @@
       <find>getBearerToken</find>
       <find>checkToken</find>
       <find>$reponse</find>
+      <find>$service = null</find>
     </findStrings>
     <replaceStrings>
       <replace>Request</replace>
@@ -189,13 +165,13 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Controller/LoginControllerTest.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Resources/traits/Security.php" />
-        <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/AbstractController.php" />
+        <option value="$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php" />
+        <option value="$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php" />
         <option value="$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" />
-        <option value="$PROJECT_DIR$/src/AbstractBundle/Test/ApiTestCase.php" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" />
       </list>
     </option>
@@ -259,170 +235,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="traits" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,12 +362,12 @@
       <workItem from="1514405432778" duration="42111000" />
       <workItem from="1514907590591" duration="70000" />
       <workItem from="1514992208057" duration="13710000" />
-      <workItem from="1515062065882" duration="14422000" />
+      <workItem from="1515062065882" duration="16429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70654000" />
+    <option name="totallyTimeSpent" value="72661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -610,17 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Command/generateParametersCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-180">
@@ -834,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Resources/traits/GenerateForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -864,14 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="49" column="86" lean-forward="false" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -904,38 +689,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="29" column="46" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
           <folding>
             <element signature="e#41#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
-          <folding>
-            <element signature="e#41#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -950,10 +709,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Controller/InterfaceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/InterfaceService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+          <folding>
+            <element signature="e#41#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractBundle/Service/AbstractService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="104" column="75" lean-forward="false" selection-start-line="104" selection-start-column="75" selection-end-line="104" selection-end-column="75" />
+        <state relative-caret-position="456">
+          <caret line="144" column="29" lean-forward="true" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
           <folding>
             <element signature="e#120#169#0#PHP" expanded="true" />
           </folding>
@@ -962,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="211" column="13" lean-forward="true" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+        <state relative-caret-position="470">
+          <caret line="261" column="32" lean-forward="false" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
           <folding />
         </state>
       </provider>

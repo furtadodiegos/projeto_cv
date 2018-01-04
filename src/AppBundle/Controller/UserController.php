@@ -105,11 +105,16 @@ class UserController extends AbstractController implements InterfaceController
     }
 
     /**
-     * @Rest\Delete("/Route/{id}")
+     * @Rest\Get("/user/delete/{id}")
      */
-    public function deleteAction($id)
+    public function deleteAction(Request $request, $id)
     {
-        // TODO: Implement deleteAction() method.
+        $this->security($request->headers->get('Authorization'));
+
+        $response = $this->service()->delete($id);
+
+        return
+            $this->renderResponse($response['data'], $response['statusCode']);
     }
 
     /**

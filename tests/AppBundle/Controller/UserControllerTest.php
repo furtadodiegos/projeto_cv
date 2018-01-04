@@ -222,4 +222,42 @@ class UserControllerTest extends ApiTestCase
 //
     }
 
+    /**
+     * @param $userProvider
+     * @dataProvider userProvider
+     */
+    public function testDelete($userProvider)
+    {
+        $this->client->request('POST', '/user/insert', [
+            'data' => json_encode($userProvider)
+        ]);
+
+        $response = $this->getData();
+        $id = $response['user']['id'];
+
+        $this->client->request('GET', '/user/delete/'.$id, [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => 'admin@email.com',
+                    'password' => '654321',
+                    'hash' => true
+                ])
+            ]);
+
+        $this->assertTrue($this->getResponse()->isSuccessful());
+        $this->assertEquals(200, $this->getResponse()->getStatusCode());
+
+        $this->client->request('GET', '/user/delete/'.$id, [], [],
+            [
+                'CONTENT_TYPE' => 'application/json',
+                'HTTP_Authorization' => $this->getAuthorizedToken([
+                    'email' => 'admin@email.com',
+                    'password' => '654321',
+                    'hash' => true
+                ])
+            ]);
+
+        $this->assertEquals(404, $this->getResponse()->getStatusCode());
+    }
 }
