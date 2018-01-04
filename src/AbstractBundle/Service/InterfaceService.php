@@ -46,10 +46,10 @@ interface InterfaceService
     public function update($params);
 
     /**
-     * @param $params ParameterBag
+     * @param $id
      * @return array
      */
-    public function delete($params);
+    public function delete($id);
 
     /**
      * @param null $repository

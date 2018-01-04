@@ -190,24 +190,10 @@ class appTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
             }
             not_app_user_update:
 
-        }
-
-        elseif (0 === strpos($pathinfo, '/Route')) {
-            // app_user_view
-            if (preg_match('#^/Route/(?P<search>[^/]++)/(?P<param>[^/]++)$#s', $pathinfo, $matches)) {
+            // app_user_delete
+            if (0 === strpos($pathinfo, '/user/delete') && preg_match('#^/user/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 if ('GET' !== $canonicalMethod) {
                     $allow[] = 'GET';
-                    goto not_app_user_view;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_view')), array (  '_controller' => 'AppBundle\\Controller\\UserController::viewAction',  '_format' => 'json',));
-            }
-            not_app_user_view:
-
-            // app_user_delete
-            if (preg_match('#^/Route/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
                     goto not_app_user_delete;
                 }
 
@@ -216,6 +202,17 @@ class appTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
             not_app_user_delete:
 
         }
+
+        // app_user_view
+        if (0 === strpos($pathinfo, '/Route') && preg_match('#^/Route/(?P<search>[^/]++)/(?P<param>[^/]++)$#s', $pathinfo, $matches)) {
+            if ('GET' !== $canonicalMethod) {
+                $allow[] = 'GET';
+                goto not_app_user_view;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_view')), array (  '_controller' => 'AppBundle\\Controller\\UserController::viewAction',  '_format' => 'json',));
+        }
+        not_app_user_view:
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

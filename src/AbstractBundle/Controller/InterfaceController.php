@@ -45,9 +45,9 @@ interface InterfaceController
     public function updateAction(Request $request);
 
     /**
-     * @Rest\Delete("/Route/{id}")
+     * @Rest\Get("/Route/{id}")
      */
-    public function deleteAction($id);
+    public function deleteAction(Request $request, $id);
 
     /**
      * @param null $service

@@ -123,12 +123,29 @@ class UserService extends AbstractService implements InterfaceService
     }
 
     /**
-     * @param $params
+     * @param $id
      * @return array
      */
-    public function delete($params)
+    public function delete($id)
     {
-        // TODO: Implement delete() method.
+        try {
+            $user = $this->repository()->find($id);
+
+            if (!$user) {
+                throw new HttpException(404, 'User not find!');
+            }
+
+            $this->em->remove($user);
+            $this->em->flush();
+            return [
+                'data' => 'success',
+                'statusCode' => 200
+            ];
+        } catch (HttpException $he) {
+            throw new HttpException($he->getStatusCode(), $he->getMessage());
+        } catch (\Exception $e) {
+            throw new HttpException(500, 'Internal error!');
+        }
     }
 
     /**
