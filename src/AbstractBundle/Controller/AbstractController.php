@@ -3,7 +3,7 @@
 namespace AbstractBundle\Controller;
 
 
-use AbstractBundle\security\ApiAuth;
+use AbstractBundle\Resources\traits\Security;
 use JMS\Serializer\SerializationContext;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,15 +17,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 abstract class AbstractController extends FOSRestController
 {
 
-    /**
-     * @var ApiAuth
-     */
-    protected $apiAuth;
-
-    public function __construct()
-    {
-        $this->apiAuth = new ApiAuth(123);
-    }
+    use Security;
 
     /**
      * Return container service
@@ -78,13 +70,6 @@ abstract class AbstractController extends FOSRestController
         return $serializer->serialize($data, $format, $context);
     }
 
-    protected function userSecurity($authorization)
-    {
-        if (!$this->apiAuth->checkCredentials($authorization)) {
-            throw new HttpException(401, 'Acesso nao autorizado!');
-        }
-    }
-
     protected function decodeRequestDataIntoParameters(Request $request)
     {
         if (!$request->get('data')) {
@@ -98,5 +83,16 @@ abstract class AbstractController extends FOSRestController
         }
 
         return new ParameterBag($data);
+    }
+
+    /**
+     * @param $authorization
+     * @return bool|object
+     */
+    protected function getUserFromToken($authorization)
+    {
+        return
+            $this->checkToken($this->getBearerToken($authorization),
+                $this->getParameter('secret'), true);
     }
 }

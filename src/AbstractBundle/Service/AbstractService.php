@@ -6,6 +6,7 @@ namespace AbstractBundle\Service;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 use JMS\DiExtraBundle\Annotation as DI;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * Class AbstractService
@@ -20,11 +21,6 @@ abstract class AbstractService
      * @var \Doctrine\ORM\EntityManager
      */
     protected $em;
-
-    /**
-     * @var \Doctrine\ORM\EntityRepository
-     */
-    protected $repository;
 
     /**
      * @var Container
@@ -42,7 +38,6 @@ abstract class AbstractService
     {
         $this->container = $container;
         $this->setEntityManager($em);
-        $this->setRepository(get_class($this));
     }
 
     /**
@@ -66,22 +61,36 @@ abstract class AbstractService
 
     /**
      * @param $class
-     */
-    public function setRepository($class)
-    {
-        $repo = explode('\\', $class);
-
-        $this->repository = $this->getRepository(str_replace('Service', '', end($repo)));
-    }
-
-    /**
-     * @param $class
      * @return \Doctrine\ORM\EntityRepository
      */
     public function getRepository($class)
     {
+        if ($class === null) {
+            $class = explode('\\', get_class($this));
+            $class = str_replace('Service', '', end($class));
+        }
+
         return
             $this->getEntityManager()->getRepository("AppBundle:$class");
+    }
+
+    /**
+     * @param array $entities
+     * @return bool
+     */
+    protected function save(array $entities)
+    {
+        try{
+            foreach ($entities as $entity) {
+                $this->em->persist($entity);
+            }
+
+            $this->em->flush();
+
+            return true;
+        } catch (\Exception $e) {
+            throw new HttpException(500, $e->getMessage());
+        }
     }
 
     /**

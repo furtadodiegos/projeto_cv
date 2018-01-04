@@ -9,11 +9,8 @@
 namespace AbstractBundle\Service;
 
 
-use \Doctrine\ORM\EntityRepository;
 use Symfony\Component\HttpFoundation\ParameterBag;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Symfony\Component\Validator\Constraint as Assert;
 
 interface InterfaceService
 {
@@ -25,39 +22,38 @@ interface InterfaceService
 
     /**
      * @param $param
-     * @return mixed
+     * @param $search
+     * @return array
      */
-    public function getOneBy($param);
+    public function getBy($search, $param);
 
     /**
-     * @param $params
-     * @param null $entity
-     * @return ParameterBag
-     */
-    public function prepare($params, $entity = null);
-
-    /**
-     * @param $params
+     * @param $entity
      * @return boolean|HttpException
      */
-    public function isValid($params);
+    public function isValid($entity);
 
     /**
-     * @param $params
+     * @param $params ParameterBag
      * @return array
      */
     public function insert($params);
 
     /**
-     * @param $params
-     * @param $id
+     * @param $params ParameterBag
      * @return array
      */
-    public function update($params, $id);
+    public function update($params);
 
     /**
-     * @param $id
-     * @return Response
+     * @param $params ParameterBag
+     * @return array
      */
-    public function delete($id);
+    public function delete($params);
+
+    /**
+     * @param null $repository
+     * @return mixed
+     */
+    public function repository($repository = null);
 }
